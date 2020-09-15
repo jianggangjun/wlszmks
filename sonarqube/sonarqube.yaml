@@ -13,7 +13,7 @@ spec:
         app: sonarqube
     spec:
       initContainers:
-      - name: sidecar
+      - name: busybox
         image: busybox:1.28.1
         imagePullPolicy: IfNotPresent
         command: ["/bin/sh","-c","sysctl -w vm.max_map_count=262144"]
